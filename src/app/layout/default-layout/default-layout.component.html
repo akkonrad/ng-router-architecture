@@ -1,0 +1,7 @@
+<div class="content">
+  <h1 *ngIf="title">{{title}}</h1>
+
+  <ng-container *ngFor="let component of content">
+    <ng-container *ngComponentOutlet="component"></ng-container>
+  </ng-container>
+</div>
