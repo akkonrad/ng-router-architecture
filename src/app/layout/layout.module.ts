@@ -1,32 +1,36 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DefaultLayoutComponent } from './default-layout/default-layout.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {DefaultLayoutComponent} from './default-layout/default-layout.component';
+import {NavbarComponent} from './navbar/navbar.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {RouterLink, RouterOutlet} from "@angular/router";
+import {RouterModule} from "@angular/router";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTabsModule} from "@angular/material/tabs";
-import { TabsLayoutComponent } from './tabs-layout/tabs-layout.component';
-
+import {TabsLayoutComponent} from './tabs-layout/tabs-layout.component';
+import {MatIconModule} from "@angular/material/icon";
+import { StepperLayoutComponent } from './stepper-layout/stepper-layout.component';
+import {MatStepperModule} from "@angular/material/stepper";
 
 
 @NgModule({
   declarations: [
-
     DefaultLayoutComponent,
     NavbarComponent,
-    TabsLayoutComponent
+    TabsLayoutComponent,
+    StepperLayoutComponent
   ],
   exports: [
     NavbarComponent
   ],
   imports: [
-    MatTabsModule,
     CommonModule,
-    MatToolbarModule,
-    RouterLink,
     MatButtonModule,
-    RouterOutlet
+    MatIconModule,
+    MatTabsModule,
+    MatToolbarModule,
+    RouterModule,
+    MatStepperModule
   ]
 })
-export class LayoutModule { }
+export class LayoutModule {
+}

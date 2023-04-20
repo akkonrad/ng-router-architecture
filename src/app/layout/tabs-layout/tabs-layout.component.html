@@ -1,1 +1,15 @@
-<p>tabs-layout works!</p>
+<nav mat-tab-nav-bar backgroundColor="primary" color="primary" [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    *ngFor="let tab of tabs"
+    [routerLink]="tab.path"
+    routerLinkActive="routerLinkActive"
+    #rla="routerLinkActive"
+    [active]="rla.isActive"
+  >
+    {{ tab.label }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>
