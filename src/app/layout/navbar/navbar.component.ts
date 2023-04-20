@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   menuItems: {link: string[], title: string}[] = [
     {
-      link: ['star-wars', 'movies-list'],
+      link: ['star-wars', 'movies'],
       title: 'Movies'
     },
     {
-      link: ['star-wars', 'planets-table'],
-      title: 'Planets'
+      link: ['star-wars', 'machines'],
+      title: 'Machines'
     }
   ]
 }

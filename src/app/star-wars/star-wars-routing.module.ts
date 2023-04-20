@@ -4,6 +4,9 @@ import {DefaultLayoutComponent} from "../layout/default-layout/default-layout.co
 import {MoviesListComponent} from "./movies-list/movies-list.component";
 import {ContentRoute, ContentRoutes, TabRoute, TabRoutes} from "../layout/types";
 import {TabsLayoutComponent} from "../layout/tabs-layout/tabs-layout.component";
+import {HomeComponent} from "../home/home.component";
+import {StarshipTableComponent} from "./starship-table/starship-table.component";
+import {VehicleComponent} from "./vehicle/vehicle.component";
 
 const MOVIES_ROUTE: ContentRoute = {
   path: 'movies',
@@ -21,14 +24,23 @@ const MACHINES_ROUTE: TabRoute = {
   component: TabsLayoutComponent,
   data: {
     tabs: [
-
+      {
+        label: 'Spaceships',
+        path: 'spaceships',
+        component: StarshipTableComponent
+      },
+      {
+        label: 'Vehicles',
+        path: 'vehicles',
+        component: VehicleComponent
+      }
     ]
   }
 }
 
 const STAR_WAR_ROUTES: ContentRoutes | TabRoutes = [
   MOVIES_ROUTE,
-  MACHINES_ROUTE
+  MACHINES_ROUTE,
 ]
 
 @NgModule({

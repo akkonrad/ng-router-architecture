@@ -2,9 +2,9 @@ import {Route, Routes} from "@angular/router";
 import {Component, Type} from "@angular/core";
 
 export interface TabView {
-  name: string,
+  path: string,
   label: string,
-  component: Type<Component>[]
+  component: Type<Component>
 }
 
 export type WithTabs = {
