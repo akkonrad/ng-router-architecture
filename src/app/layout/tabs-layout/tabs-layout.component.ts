@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router, Routes} from "@angular/router";
-import {TabView, WithTabs} from "../types";
+import {ActivatedRoute, Router} from "@angular/router";
 
 interface Tab {
   label: string;
@@ -15,10 +14,11 @@ interface Tab {
 export class TabsLayoutComponent implements OnInit {
   tabs: Tab[] = [];
 
-  constructor(private readonly route: ActivatedRoute) {
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router) {
   }
 
   ngOnInit(): void {
+
     if (!this.route || !this.route.snapshot.routeConfig?.children) {
       return;
     }
@@ -30,6 +30,7 @@ export class TabsLayoutComponent implements OnInit {
           path: route.path,
         };
       });
+
   }
 
 }

@@ -8,7 +8,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatTabsModule} from "@angular/material/tabs";
 import {TabsLayoutComponent} from './tabs-layout/tabs-layout.component';
 import {MatIconModule} from "@angular/material/icon";
-import { StepperLayoutComponent } from './stepper-layout/stepper-layout.component';
+import {StepperLayoutComponent} from './stepper-layout/stepper-layout.component';
 import {MatStepperModule} from "@angular/material/stepper";
 
 
@@ -20,7 +20,9 @@ import {MatStepperModule} from "@angular/material/stepper";
     StepperLayoutComponent
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    TabsLayoutComponent,
+    StepperLayoutComponent
   ],
   imports: [
     CommonModule,

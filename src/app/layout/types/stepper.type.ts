@@ -3,6 +3,7 @@ import {InNavigation} from "./nav.type";
 
 export type StepView = {
   title: string,
+  state?: string
 }
 
 export type WithSteps = { steps?: StepView[] } & InNavigation;
