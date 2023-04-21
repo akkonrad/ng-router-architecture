@@ -1,10 +1,8 @@
 import {Route, Routes} from "@angular/router";
-import {Component, Type} from "@angular/core";
 import {InNavigation} from "./nav.type";
 
 export type TabView = {
-  label: string,
-  component: Type<Component>
+  title: string,
 }
 
 export type WithTabs = {

@@ -22,8 +22,8 @@ export class NavbarComponent {
       title: 'Machines'
     },
     {
-      path: ['vehicles'],
-      title: 'Vehicles'
+      path: ['config'],
+      title: 'Configurator'
     },
   ]
 

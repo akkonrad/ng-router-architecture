@@ -1,0 +1,11 @@
+import {Route, Routes} from "@angular/router";
+import {InNavigation} from "./nav.type";
+
+export type StepView = {
+  title: string,
+}
+
+export type WithSteps = { steps?: StepView[] } & InNavigation;
+
+export type StepRoute = Route & WithSteps;
+export type StepRoutes = Routes & WithSteps;
