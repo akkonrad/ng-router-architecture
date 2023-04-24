@@ -13,12 +13,16 @@ interface MenuItem {
 export class NavbarComponent {
   menuItems: MenuItem[] = [
     {
-      path: ['home'],
-      title: 'home'
+      path: ['about'],
+      title: 'About'
     },
     {
       path: ['stepper'],
       title: 'Stepper'
+    },
+    {
+      path: ['tabs'],
+      title: 'Tabs'
     }
   ]
 

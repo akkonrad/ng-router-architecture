@@ -19,13 +19,18 @@ export class TabsLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     if (!this.route || !this.route.snapshot.routeConfig?.children) {
       return;
     }
 
+    this.checkIfNeedsRedirect();
+
+
     this.tabs = this.route?.snapshot.routeConfig?.children?.filter(route => route.data)
-      .map((route) => {
+      .map((route, index: number) => {
+        if (index === 0) {
+          this.activeLink = route?.path + '';
+        }
         return {
           label: route.data?.['title'],
           path: route.path,
@@ -34,4 +39,15 @@ export class TabsLayoutComponent implements OnInit {
 
   }
 
+  private checkIfNeedsRedirect() {
+    const paths: string[] = this.route.routeConfig!.children!.map(child => child.path || '');
+
+    const segments = this.router.url.split('/');
+    const lastSegment = segments[segments.length - 1];
+
+    if (!paths!.includes(lastSegment)) {
+      this.router.navigate([this.router.url, paths[0]]);
+    }
+
+  }
 }

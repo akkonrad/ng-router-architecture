@@ -7,18 +7,19 @@ import {AboutComponent} from "./about/about.component";
 
 const routes: ContentRoutes = [
   {
-    path: 'home',
+    path: 'about',
     component: DefaultLayoutComponent,
     data: {
-      inNavigation: true,
-      navTitle: "Welcome",
-      title: "Welcome",
       content: [HomeComponent, AboutComponent]
     }
   },
   {
     path: 'stepper',
     loadChildren: () => import('./content/stepper/stepper-routing.module').then(m => m.StepperRoutingModule),
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./content/tabs/tabs-routing.module').then(m => m.TabsRoutingModule),
   }
 ];
 
