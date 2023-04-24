@@ -7,6 +7,7 @@ import {NestedStepOneComponent} from "./nested-step-one/nested-step-one.componen
 import {NestedStepTwoComponent} from "./nested-step-two/nested-step-two.component";
 import {RouterModule} from "@angular/router";
 import {SubTabOneComponent} from "./sub-tab-one/sub-tab-one.component";
+import {SubTabTwoComponent} from "./sub-tab-two/sub-tab-two.component";
 
 
 const routes = [
@@ -49,7 +50,7 @@ const routes = [
               },
               {
                 path: 'sub-tab-two',
-                component: SubTabOneComponent,
+                component: SubTabTwoComponent,
                 data: {
                   title: 'two'
                 }
