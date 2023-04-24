@@ -17,8 +17,8 @@ const routes: ContentRoutes = [
     }
   },
   {
-    path: 'content',
-    loadChildren: () => import('./content/content-routing.module').then(m => m.ContentRoutingModule),
+    path: 'stepper',
+    loadChildren: () => import('./content/stepper/stepper-routing.module').then(m => m.StepperRoutingModule),
   }
 ];
 
