@@ -5,6 +5,7 @@ import {InNavigation} from "./nav.type";
 export type WithContent = {
   content?: Type<Component>[];
   title?: string;
+  navTitle?: string;
 } & InNavigation;
 
 export type ContentRoute = Route & WithContent;

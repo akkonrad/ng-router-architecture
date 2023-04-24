@@ -1,8 +1,9 @@
 <nav [tabPanel]="tabPanel" backgroundColor="primary" color="primary" mat-tab-nav-bar>
   <a
     #rla="routerLinkActive"
+    (click)="activeLink = tab.path"
     *ngFor="let tab of tabs"
-    [active]="rla.isActive"
+    [active]="tab.path === activeLink"
     [routerLink]="tab.path"
     mat-tab-link
     routerLinkActive="routerLinkActive"

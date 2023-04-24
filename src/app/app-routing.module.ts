@@ -1,22 +1,24 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes,} from '@angular/router';
+import {RouterModule,} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {DefaultLayoutComponent} from "./layout/default-layout/default-layout.component";
 import {ContentRoutes} from "./layout/types";
+import {AboutComponent} from "./about/about.component";
 
 const routes: ContentRoutes = [
   {
-    path: '',
+    path: 'home',
     component: DefaultLayoutComponent,
     data: {
-      inNavigation: false,
-      title: "Welcome to Star Wars Page",
-      content: [HomeComponent]
+      inNavigation: true,
+      navTitle: "Welcome",
+      title: "Welcome",
+      content: [HomeComponent, AboutComponent]
     }
   },
   {
-    path: 'star-wars',
-    loadChildren: () => import('./star-wars/star-wars.module').then(m => m.StarWarsModule),
+    path: 'content',
+    loadChildren: () => import('./content/content-routing.module').then(m => m.ContentRoutingModule),
   }
 ];
 

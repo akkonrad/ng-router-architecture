@@ -13,6 +13,7 @@ interface Tab {
 })
 export class TabsLayoutComponent implements OnInit {
   tabs: Tab[] = [];
+  activeLink = '';
 
   constructor(private readonly route: ActivatedRoute, private readonly router: Router) {
   }
