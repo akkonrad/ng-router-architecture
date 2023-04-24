@@ -23,6 +23,10 @@ export class NavbarComponent {
     {
       path: ['tabs'],
       title: 'Tabs'
+    },
+    {
+      path: ['nested'],
+      title: 'Nested'
     }
   ]
 

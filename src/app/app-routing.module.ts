@@ -20,6 +20,10 @@ const routes: ContentRoutes = [
   {
     path: 'tabs',
     loadChildren: () => import('./content/tabs/tabs-routing.module').then(m => m.TabsRoutingModule),
+  },
+  {
+    path: 'nested',
+    loadChildren: () => import('./content/nested/nested-routing.module').then(m => m.NestedRoutingModule),
   }
 ];
 
