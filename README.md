@@ -11,4 +11,4 @@ There are few layots examples basing on angular material:
 - Tabs - using angular tabs, each tab is a separate route - [configuration example](https://github.com/akkonrad/ng-router-architecture/blob/master/src/app/content/tabs/tabs-routing.module.ts)
 - Nested - if you need to nest one layout in another - [configuration example](https://github.com/akkonrad/ng-router-architecture/blob/master/src/app/content/nested/nested-routing.module.ts)
 
-[**DEMO**](https://architecture-pearl-nine.vercel.app/nested/nested-tab/nested-step-one)
+[**DEMO**](https://architecture-pearl-nine.vercel.app)
